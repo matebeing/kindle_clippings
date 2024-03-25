@@ -6,12 +6,12 @@ import { FaGithub } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <main className="max-w-[1300px] mx-auto">
-      <Navbar />
+    <main className="lg:max-w-[1300px] sm:max-w-[500px] mx-auto ">
+    <Navbar />
 
 
     <div className="flex justify-center mt-[8rem] ">
-      <div className="flex  gap-28  w-[800px]">
+      <div className="flex lg:flex-row md:flex-col sm:flex-col gap-28 w-[800px]">
           <Image src={svgKindle} alt="Kindle svg" width={300} height={300}  priority></Image>
           <Import />
       </div>
