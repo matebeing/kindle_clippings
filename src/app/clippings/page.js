@@ -72,7 +72,7 @@ const Clippings = () => {
   }
 
   return (
-    <div className='lg:max-w-[1300px] sm:max-w-[500px] mx-auto'>
+    <div className='max-w-[1300px] mx-auto sm:m-5'>
       <Navbar />
       <div className='flex gap-5 mt-10 h-52 overflow-auto '>
         <div className='flex flex-row flex-grow gap-5' onClick={(e) => handleBookTitle(e.target.id)}>
