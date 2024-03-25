@@ -77,7 +77,7 @@ const Clippings = () => {
       <div className='flex gap-5 mt-10 h-52 overflow-auto '>
         <div className='flex flex-row flex-grow gap-5' onClick={(e) => handleBookTitle(e.target.id)}>
           {Object.entries(books).map(([book, { title, author, quotes, backgroundColor }]) => (
-            <ClipCard key={book} title={title} author={author} backgroundColor={backgroundColor} book={book} />
+            ClipCard(title, author, backgroundColor, book)
           ))}
         </div>
       </div>
