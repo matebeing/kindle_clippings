@@ -77,7 +77,7 @@ const Clippings = () => {
       <div className='flex gap-5 mt-10 h-52 overflow-auto '>
         <div className='flex flex-row flex-grow gap-5' onClick={(e) => handleBookTitle(e.target.id)}>
           {Object.entries(books).map(([book, { title, author, quotes, backgroundColor }]) => (
-            ClipCard(title, author, backgroundColor, book)
+            <ClipCard key={book} title={title} author={author} backgroundColor={backgroundColor} book={book} />
           ))}
         </div>
       </div>
@@ -90,8 +90,8 @@ const Clippings = () => {
           Por {bookTitle in books ? books[bookTitle].author : 'Author not found'} - <span className='font-normal'>{bookTitle in books ? books[bookTitle].quotes.length : '0'} recortes</span>
         </h2>
         <div>
-          {bookTitle in books ? books[bookTitle].quotes.map(({ position, date, content }) => (
-            <div className='mt-10 pl-2' style={{borderLeft: `10px solid ${books[bookTitle].backgroundColor[1]}`}}>
+          {bookTitle in books ? books[bookTitle].quotes.map(({ position, date, content }, index) => (
+            <div className='mt-10 pl-2' key={index} style={{borderLeft: `10px solid ${books[bookTitle].backgroundColor[1]}`}}>
               <p className='font-bold text-lg '>
                 {content}
               </p>
