@@ -15,7 +15,7 @@ Uma série de exemplos passo a passo que informam o que você precisa fazer para
 
 Clonar o repositório:
 
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/matebeing/kindle_clippings.git
 
 Instalar dependências:
 
